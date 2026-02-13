@@ -326,10 +326,11 @@ nav a:focus::before {
 .intro-content {
   position: relative;
   display: grid;
-  grid-gap: 4%;
-  grid-template-columns: 35% 61%;
+  grid-column-gap: 4%;
+  grid-template-columns: 48% 48%;
   grid-template-areas: 
-    "imgcs textcs"
+    "textcs textcs"
+    "imgcs imgcs2"
 }
 
 .citsci-image {
@@ -344,10 +345,22 @@ nav a:focus::before {
   transform: rotate(0deg);
 }
 
+.citsci-image-2 {
+  grid-area: imgcs2;
+  width: 100%;
+  max-height: 760px;
+  margin: auto;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  overflow: hidden;
+  transform: rotate(0deg);
+}
+
 .intro-text {
   grid-area: textcs;
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 4% auto;
   padding: 4rem;
   border-radius: 1rem;
   background-color: var(--clr-opaque-brn);
@@ -462,12 +475,10 @@ nav a:focus::before {
   border-radius: 1rem;
   box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.4);
   grid-column-gap: 4%;
-  grid-row-gap: 6rem;
   display: grid;
   grid-template-columns: 48% 48%;
   grid-template-areas: 
     "ebird inat"
-    "downloader downloader"
 }
 
 .obs-logos {
@@ -611,6 +622,7 @@ nav a:focus::before {
   color: black;
   font-size: var(--main-text-size);
   padding: 0rem 3rem 4rem 3rem;
+  margin-top: 4%;
   box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.4);
   text-align: center;
   align-content: center;
@@ -659,6 +671,7 @@ nav a:focus::before {
   grid-template-columns: 28% 4% 68%;
   grid-template-areas: 
     "picker . map"
+    "downloader downloader downloader"
 }
 
 .picker-box {

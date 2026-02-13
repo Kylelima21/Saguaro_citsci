@@ -86,28 +86,14 @@ ui <- fluidPage(
                 icon("book-open",  class = "body-box-icon"), 
                 h4("Introduction", class = "body-titles")),
             div(class = "intro-content",
-                img(src = "img/citsci.jpg", alt = "A group of citizen scientists collecting data
-                    with iNatuarlist", class = "citsci-image"),
                 div(class = "intro-text",
                     h2("Welcome to the Saguaro National Park citizen science explorer!"),
-                    h3("This display summarizes iNaturalist and eBird records from the last week in Saguaro National Park.
-                        In addition to this summary, we present some recent science that has been made possible
-                        by citizen science participation in our work here the park. To get involved with one of our projects
-                        take a brochure from this display, ask the welcome center hosts for more information, or visit our website!"),
-                    # div(class = "species-guess",
-                    #     p("Can you guess these species?"),
-                    #     tags$button(class = "btn-purple species-btn", "Reveal answers!"),
-                    #     div(class = "tres-text",
-                    #         p("tree swallow")),
-                    #     div(class = "snap-text",
-                    #         p(HTML("common snapping <br> turtle"))),
-                    #     div(class = "mon-text",
-                    #         p("monarch")),
-                    #     div(class = "intro-three",
-                    #         img(src = "img/tres.jpeg", alt = "Tree swallow sitting on a wooden post"),
-                    #         img(src = "img/turtle.jpg", alt = "Northern leopard frog in a gravel path"),
-                    #         img(src = "img/monarch.jpg", alt = "Monarch feeding from a red clover flower")))
-                    ))
+                    h3("This display summarizes iNaturalist and eBird records from the past week in Saguaro National Park. In addition to this summary, we've highlighted some recent science that has been made possible by citizen science participation in our work here at the park. To get involved with one of our projects, ask a ranger in the Visitor Center or visit our website!")),
+                img(src = "img/citsci.png", alt = "A group of citizen scientists collecting data
+                    on a saguaro catcus", class = "citsci-image"),
+                img(src = "img/citsci2.png", alt = "A group of citizen scientists collecting data
+                    on a saguaro catcus", class = "citsci-image-2"),
+                )
     )),
     
     ## Data summary
@@ -115,7 +101,7 @@ ui <- fluidPage(
         div(class = "anchors", id = "summary"),
         div(class = "body-title-box",
             icon("table",  class = "body-box-icon"), 
-            h4("Data Summary", class = "body-titles")),
+            h4("Citizen Science Summary", class = "body-titles")),
         div(class = "inat-box", 
             img(src = "img/inat.png", alt = "iNaturalist", class = "obs-logos"),
             div(class = "sep-line"),
@@ -159,12 +145,6 @@ ui <- fluidPage(
                     icon("crow"),
                     h2(textOutput("top_sp_e"), class = "summary-stat-text")),
                 )),
-        div(class = "data-table-box",
-            h3("Explore the past week's data"),
-            div(class = "dattab", 
-                DT::dataTableOutput("tableout")),
-            h4("Data from iNaturalist and eBird and modified by Schoodic Institute at Acadia National Park.")
-        )
     ),
     
     ## Gallery
@@ -245,7 +225,13 @@ ui <- fluidPage(
                         multiple = FALSE)),
           div(class = "map-box",
               leafletOutput("reactspmap", height = "100%"),
-              )),
+              ),
+          div(class = "data-table-box",
+              h3("Explore the past week's data"),
+              div(class = "dattab", 
+                  DT::dataTableOutput("tableout")),
+              h4("Data from iNaturalist and eBird and modified by Schoodic Institute at Acadia National Park.")
+        )),
     
     ## Science
     div(class = "science-box",
@@ -288,20 +274,36 @@ ui <- fluidPage(
             br(),
             h4("Background"),
             "There is a wealth of scientific data collected by citizen scientists that exists 
-            in protected areas like national parks. These data have generally not been analyzed 
+            in protected areas like national parks. These data have generally not been leveraged 
             to inform park management or summarized and communicated back out to the park visitors 
             who helped collect the data. This project was created to address these points and assess 
-            the biodiversity of Acadia National Park through building a citizen science analysis
+            the biodiversity of national parks through building a citizen science data
             workflow that is transferable across protected areas.",
             br(),
-            h4("About Schoodic Institute"),
+            h4("Partners"),
+            h3("Schoodic Institute"),
             "Established in 2004, Schoodic Institute at Acadia National Park is a 501(c)(3) nonprofit
             organization and a partner in science and education of the National Park Service. Based at the
             largest National Park Service Research Learning Center in Winter Harbor, Maine, in
             Wabanaki homeland, Schoodic Institute’s focus is understanding environmental change taking
             place in Acadia and beyond, and helping managers of parks and other protected areas respond
-            and adapt to change while engaging people of all ages in science.",
+            and adapt to change while engaging people of all ages in science. For more information, please visit www.schoodicinstitute.org",
             br(),
+            br(),
+            h3("Friends of Saguaro National Park"),
+            "Friends of Saguaro National Park is the not-for-profit fundraising partner of the National Park Service at Tucson's Saguaro National Park, working to help the public through three initiatives:",
+            tags$ul(style = "padding-left: 40px;",
+            tags$li("Discover Saguaro - by reconnecting children and nature, and encouraging the exploration and discovery of the resources, heritage and recreational opportunities of the Park;"),
+            tags$li("Protect Saguaro - by assisting the preservation and conservation of the natural and cultural resources of the Park, and sustaining its wilderness character; and"),
+            tags$li("Support Saguaro - by strengthening community partnerships, and building environmental stewardship through philanthropy, public education, and volunteerism."),
+            tags$li("For more information, please visit www.friendsofsaguaro.org")),
+            br(),
+            h3("Western National Parks"),
+            "What Does Western National Parks do? As a nonprofit education partner of the National Park Service, WNP supports 72 parks across the West, developing products, services, and programs that enrich the visitor experience.",
+            tags$ul(style = "padding-left: 40px;",
+            tags$li("Western National Parks' Commitment: National parks tell the story of America, embodying its beauty, culture, and heritage. WNP helps discover, preserve, and share that story. But the American story is rapidly unfolding. In today's fast-paced, ever-changing world, WNP is committed to discovery: new knowledge, new understanding, and new ways to engage with society."),
+            tags$li("Contact: WNP is based in Tucson, Arizona. Our home office adjoins the National Parks Store, situated at the foot of the Santa Catalina Mountains in the heart of the Sonoran Desert."),
+            tags$li("For more information, please visit www.wnpa.org")),
             h4("Get in Touch!"),
             "If you are interested in a product like this for a protected area near you, or if you have 
             any questions or concerns, contact Kyle Lima at klima@schoodicinstitute.org.",
