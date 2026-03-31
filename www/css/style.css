@@ -803,7 +803,7 @@ nav a:focus::before {
   grid-area: imgs;
   margin: auto;
   width: 100%;
-  max-height: 300px;
+  max-height: 450px;
   border-radius: 1rem;
   box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.4);
   object-fit: cover;
@@ -833,12 +833,40 @@ nav a:focus::before {
 }
 
 .science-text > h4 {
-  margin: 30px 0;
+  margin: 30px 0 0 0;
   font-size: var(--main-text-size);
   line-height: 1.5;
 }
 
+.qrimg {
+  width: 20%;
+  margin-left: 3rem;
+}
 
+.rep-imgs {
+  grid-area: imgs;
+  margin: auto;
+  display: grid;
+  grid-row-gap: 5%;
+  grid-template-areas: 
+    "snake" 
+    "qr"
+}
+
+.rep-snk {
+  grid-area: snake;
+  width: 100%;
+  max-height: 450px;
+  border-radius: 1rem;
+  box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+}
+
+.qrimg-rep {
+  grid-area: qr;
+  margin: auto;
+  width: 40%;
+}
 
 
 

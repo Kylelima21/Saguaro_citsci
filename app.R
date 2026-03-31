@@ -51,21 +51,19 @@ ui <- fluidPage(
      div(class = "menu-nav-box",
          tags$nav(tags$ul(`aria-label` = "Primary navigation", role = "list",
                           tags$li(tags$a(href = "#", "Home")),
-                          tags$li(tags$a(href = "#intro", "Introduction")),
-                          tags$li(tags$a(href = "#summary", "Summary")),
+                          tags$li(tags$a(href = "#getinvolved", "Get Involved")),
+                          tags$li(tags$a(href = "#summary", "Observation Summary")),
                           tags$li(tags$a(href = "#gallery", "Gallery")),
                           tags$li(tags$a(href = "#spex", "Species Explorer")),
-                          tags$li(tags$a(href = "#science", "Science")),
                           tags$li(tags$a(href = "#about", "About"))))),
      tags$nav(class = "mobile-nav",
               tags$button(class = "nav-toggle",
                           span(class = "vegburger")),
               tags$ul(class = "nav-list", `aria-label` = "Mobile navigation",
                       tags$li(class = "nav-item", tags$a(href = "#", class = "nav-link", "Home")),
-                      tags$li(class = "nav-item", tags$a(href = "#intro", class = "nav-link", "Introduction")),
-                      tags$li(class = "nav-item", tags$a(href = "#summary", class = "nav-link", "Summary")),
+                      tags$li(class = "nav-item", tags$a(href = "#getinvolved", class = "nav-link", "Get Involved")),
+                      tags$li(class = "nav-item", tags$a(href = "#summary", class = "nav-link", "Observation Summary")),
                       tags$li(class = "nav-item", tags$a(href = "#spex", class = "nav-link", "Species Explorer")),
-                      tags$li(class = "nav-item", tags$a(href = "#science", class = "nav-link", "Science")),
                       tags$li(class = "nav-item", tags$a(href = "#gallery", class = "nav-link", "Gallery")),
                       tags$li(class = "nav-item", tags$a(href = "#about", class = "nav-link", "About"))))
     ),
@@ -78,30 +76,68 @@ ui <- fluidPage(
     div(class = "photo-cred",
         "Photo by Jack Brauer"),
     
-    ## Intro
+    ## Science
     div(class = "spacer",
-        div(class = "intro-box",
-            div(class = "anchors",  id = "intro"),
-            div(class = "body-title-box",
-                icon("book-open",  class = "body-box-icon"), 
-                h4("Introduction", class = "body-titles")),
-            div(class = "intro-content",
-                div(class = "intro-text",
-                    h2("Welcome to the Saguaro National Park citizen science explorer!"),
-                    h3("This display summarizes iNaturalist and eBird records from the past week in Saguaro National Park. In addition to this summary, we've highlighted some recent science that has been made possible by citizen science participation in our work here at the park. To get involved with one of our projects, ask a ranger in the Visitor Center or visit our website!")),
-                img(src = "img/citsci.png", alt = "A group of citizen scientists collecting data
-                    on a saguaro catcus", class = "citsci-image"),
-                img(src = "img/citsci2.png", alt = "A group of citizen scientists collecting data
-                    on a saguaro catcus", class = "citsci-image-2"),
-                )
+      div(class = "science-box",
+          div(class = "anchors", id = "getinvolved"),
+          div(class = "body-title-box",
+            icon("microscope",  class = "body-box-icon"), 
+            h4("Get Involved", class = "body-titles")),
+        div(class = "",
+            h2("Get involved in our science!")),
+        div(class = "science-content-1",
+            img(src = "img/stinknet.jpg", alt = "A photo showing lots of stinknet in bloom with yellow flowers", class = "science-img"),
+            div(class = "science-text purp",
+                h3("Startling Stinknet"),
+                h4("Stinknet is an alarming invasive plant that threatens our communities by destroying biodiversity 
+                   with its aggressive growth, causing fires when the plants dry, emitting toxic gases when burned, and causing 
+                   allergic reactions for some people. Stinknet is currently invading the Tucson area, and we need your help 
+                   finding and removing it."),
+                h4("Scan the QR code to learn more or to report stinknet:", img(src = "img/stinknet_QR.png", class = "qrimg")),
+                )),
+        div(class = "science-content-2",
+            div(class = "rep-imgs",
+              img(src = "img/rarerep.jpg", alt = "A red, black, and yellow snake on rocky substrate", class = "rep-snk"),
+              img(src = "img/inat_QR.png", class = "qrimg-rep")),
+            div(class = "science-text green",
+                h3("Rare Reptiles"),
+                h4("Saguaro National Park is a reptile and amphibian paradise! We have nearly 50 species, but many are quite rare or spent most of their lives underground. If you’ve seen a saddled leaf-nosed snake, western ground snake, or glossy snake lately, lucky you, because our biologists rarely do!"),
+                h4("Knowing what species are in the park and where they occur is of great value for conserving these amazing reptiles for future generations, so please take photos of every snake you see – just don’t get too close to the ones with rattles. We are also interested in photos of Desert Box turtles and long-nosed leopard lizards, both of which are very rare in the park’s east district."),
+                h4("Please help us by uploading any photos you take of reptiles and amphibians to iNaturalist. Download the free app by scanning the QR code to the left."),
+                )),
+        div(class = "science-content-3",
+            img(src = "img/saguarobloom.jpg", alt = "A photo take from above capturing the white blossums of a Saguaro Cactus", class = "science-img"),
+            div(class = "science-text purp",
+                h3("Saguaro Blooms"),
+                h4("Saguaros always bloom in late spring, during May and June – except when they don’t. Late fall and winter flowers on saguaros are quite unusual, but sometimes – as in 2020 – the park sees large fall blooms, for reasons scientists don’t understand. These flowers are pollinated and turn into bright red fruits that ripen as late as January."),
+                h4("If you see a saguaro blooming during the months of September through March, please be a citizen scientist and take a photo of it! These records are valuable for long-term research on how saguaros are adapting to warming temperatures in the Sonoran Desert."),
+                h4("You can upload any saguaro flower photos to iNaturalist:", img(src = "img/inat_QR.png", class = "qrimg"))))
     )),
+    
+    # ## Intro
+    # div(class = "spacer",
+    #     div(class = "intro-box",
+    #         div(class = "anchors",  id = "intro"),
+    #         div(class = "body-title-box",
+    #             icon("book-open",  class = "body-box-icon"), 
+    #             h4("Introduction", class = "body-titles")),
+    #         div(class = "intro-content",
+    #             div(class = "intro-text",
+    #                 h2("Welcome to the Saguaro National Park citizen science explorer!"),
+    #                 h3("This display summarizes iNaturalist and eBird records from the past week in Saguaro National Park. In addition to this summary, we've highlighted some recent science that has been made possible by citizen science participation in our work here at the park. To get involved with one of our projects, ask a ranger in the Visitor Center or visit our website!")),
+    #             img(src = "img/citsci.png", alt = "A group of citizen scientists collecting data
+    #                 on a saguaro catcus", class = "citsci-image"),
+    #             img(src = "img/citsci2.png", alt = "A group of citizen scientists collecting data
+    #                 on a saguaro catcus", class = "citsci-image-2"),
+    #             )
+    # )),
     
     ## Data summary
     div(class = "summary-box", 
         div(class = "anchors", id = "summary"),
         div(class = "body-title-box",
             icon("table",  class = "body-box-icon"), 
-            h4("Citizen Science Summary", class = "body-titles")),
+            h4("Citizen Science Observation Summary", class = "body-titles")),
         div(class = "inat-box", 
             img(src = "img/inat.png", alt = "iNaturalist", class = "obs-logos"),
             div(class = "sep-line"),
@@ -232,35 +268,7 @@ ui <- fluidPage(
                   DT::dataTableOutput("tableout")),
               h4("Data from iNaturalist and eBird and modified by Schoodic Institute at Acadia National Park.")
         )),
-    
-    ## Science
-    div(class = "science-box",
-        div(class = "anchors", id = "science"),
-        div(class = "body-title-box",
-            icon("microscope",  class = "body-box-icon"), 
-            h4("Science", class = "body-titles")),
-        div(class = "science-content-1",
-            img(src = "img/atsp.jpg", alt = "An American Tree Sparrow perched in a shrub", class = "science-img"),
-            div(class = "science-text purp",
-                h3("Acadia National Park Winter Birds: 51 Years of Change Along the Coast of Maine"),
-                h4("This project analyzed 51 years of citizen science effort from the National Audubon Society
-                   Christmas Bird Counts of Acadia National Park. Visit our website for more information on this 
-                   project."))),
-        div(class = "science-content-2",
-            img(src = "img/cape.jpg", alt = "A Calico Pennant in Acadia National Park", class = "science-img"),
-            div(class = "science-text green",
-                h3("Dragonfly Mercury Project"),
-                h4("This project assessed mercury concentrations in dragonfly larvae from 100 different National Park
-                   Service units and other protected lands, made possible by citizen scientists. Visit our website for 
-                   more information on this project."))),
-        div(class = "science-content-3",
-            img(src = "img/asco.jpg", alt = "Ascophyllum nodosum or rockweed from Acadia National Park", class = "science-img"),
-            div(class = "science-text purp",
-                h3("Project ASCO (Assessing Seaweed via Community Observations)"),
-                h4("This ongoing project aims to understand how much rockweed exists along the Maine coast so that 
-                   we can inform management and harvesting regulations to ensure that this species can thrive in the future.
-                   Visit our website for more information on this project.")))
-        ),
+
     
     ## About
     div(class = "about-grid-box",
@@ -287,15 +295,15 @@ ui <- fluidPage(
             largest National Park Service Research Learning Center in Winter Harbor, Maine, in
             Wabanaki homeland, Schoodic Institute’s focus is understanding environmental change taking
             place in Acadia and beyond, and helping managers of parks and other protected areas respond
-            and adapt to change while engaging people of all ages in science. For more information, please visit www.schoodicinstitute.org",
+            and adapt to change while engaging people of all ages in science. For more information, please visit www.schoodicinstitute.org.",
             br(),
             br(),
             h3("Friends of Saguaro National Park"),
             "Friends of Saguaro National Park is the not-for-profit fundraising partner of the National Park Service at Tucson's Saguaro National Park, working to help the public through three initiatives:",
             tags$ul(style = "padding-left: 40px;",
-            tags$li("Discover Saguaro - by reconnecting children and nature, and encouraging the exploration and discovery of the resources, heritage and recreational opportunities of the Park;"),
-            tags$li("Protect Saguaro - by assisting the preservation and conservation of the natural and cultural resources of the Park, and sustaining its wilderness character; and"),
-            tags$li("Support Saguaro - by strengthening community partnerships, and building environmental stewardship through philanthropy, public education, and volunteerism."),
+            tags$li("Discover Saguaro - by reconnecting children and nature, and encouraging the exploration and discovery of the resources, heritage and recreational opportunities of the Park"),
+            tags$li("Protect Saguaro - by assisting the preservation and conservation of the natural and cultural resources of the Park, and sustaining its wilderness character"),
+            tags$li("Support Saguaro - by strengthening community partnerships, and building environmental stewardship through philanthropy, public education, and volunteerism"),
             tags$li("For more information, please visit www.friendsofsaguaro.org")),
             br(),
             h3("Western National Parks"),
@@ -306,7 +314,7 @@ ui <- fluidPage(
             tags$li("For more information, please visit www.wnpa.org")),
             h4("Get in Touch!"),
             "If you are interested in a product like this for a protected area near you, or if you have 
-            any questions or concerns, contact Kyle Lima at klima@schoodicinstitute.org.",
+            any questions about this product, please contact Kyle Lima at klima@schoodicinstitute.org.",
             h5(textOutput("today")))
         ),
         
@@ -320,18 +328,16 @@ ui <- fluidPage(
             <p><i>Our Mission is inspiring science, learning, and community for a changing world.</i></p>
             </div>
             <div>
-            <h2>ABOUT</h2>
-            <p><a href = "https://github.com/Kylelima21/Saguaro_citsci" target="_blank">Source code</a></p>
+            <p><a href = "#">Home</a></p>
+            <p><a href = "#getinvolved">Get Involved</a></p>
             </div>
             <div>
-            <h2>DATA ACCESS</h2>
-            <p><a href = "https://www.inaturalist.org" target="_blank">iNaturalist</a></p>
-            <p><a href = "http://www.ebird.org" target="_blank">eBird</a></p>
+            <p><a href = "#summary">Observation Summary</a></p>
+            <p><a href = "#gallery">Gallery</a></p>
             </div>
             <div>
-            <h2>CONTACT</h2>
-            <p>Contact us at klima@schoodicinstitute.org</p>
-            <p><a href = "https://schoodicinstitute.org/" target = "_blank">Visit our website</a></p>
+            <p><a href = "#spex">Species Explorer</a></p>
+            <p><a href = "#about">About</a></p>
             </div>
             </div>'),
       div(class = "copyright",
@@ -339,33 +345,6 @@ ui <- fluidPage(
           )
       )
     )
-    # tags$footer(
-    #       div(class = "footer-background",
-    #           div(class = "footer-grid-box",
-    #               div(class = "footer-left-box",
-    #                   div(tags$img(src = "img/schoodic_horizontal.png", alt = "Schoodic Institute", class = "footer-logo")),
-    #                   div(class = "logo-text", tags$em("Our mission is inspiring science, learning, and community for a changing world."))),
-    # 
-    #               div(class = "footer-nav-box",
-    #                   tags$ul(`aria-label` = "Footer navigation", role = "list",
-    #                           tags$li(tags$a(href = "#", "Home")),
-    #                           tags$li(tags$a(href = "#intro", "Introduction")),
-    #                           tags$li(tags$a(href = "#summary", "Summary")),
-    #                           tags$li(tags$a(href = "#gallery", "Gallery")),
-    #                           tags$li(tags$a(href = "#spex", "Species Explorer")),
-    #                           tags$li(tags$a(href = "#science", "Science")),
-    #                           tags$li(tags$a(href = "#about", "About")))),
-    # 
-    #               div(class = "footer-copyright-box",
-    #                   textOutput("copyright_txt")),
-    # 
-    #               div(class = "footer-link-box",
-    #                   div(class = "footer-image-box",
-    #                         div(tags$img(src = "img/acad_back.jpg", alt = "Acadia National Park scenery", class = "footer-image")),
-    #                         div(class = "bottom-right", h4("© Ben Tero"))))
-    #               )
-    #               )
-    #   )
   )
 )
 
