@@ -799,6 +799,20 @@ nav a:focus::before {
     "texts imgs"
 }
 
+.scihead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 5rem 0;
+}
+
+.scihead > h3 {
+  color: black;
+  font-size: 50px;
+  font-weight: 500;
+  margin: auto !important;
+}
+
 .science-img {
   grid-area: imgs;
   margin: auto;
