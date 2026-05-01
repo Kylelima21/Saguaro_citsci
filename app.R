@@ -73,8 +73,6 @@ ui <- fluidPage(
        h1(textOutput("title"), class = "title-homepage"),
        h3("Citizen Science Explorer", class = "subtitle-homepage")
     ),
-    div(class = "photo-cred",
-        "Photo by Jack Brauer"),
     
     ## Science
     div(class = "spacer",
@@ -101,16 +99,14 @@ ui <- fluidPage(
               img(src = "img/inat_QR.png", class = "qrimg-rep")),
             div(class = "science-text green",
                 h3("Rare Reptiles"),
-                h4("Saguaro National Park is a reptile and amphibian paradise! We have nearly 50 species, but many are quite rare or spent most of their lives underground. If you’ve seen a saddled leaf-nosed snake, western ground snake, or glossy snake lately, lucky you, because our biologists rarely do!"),
-                h4("Knowing what species are in the park and where they occur is of great value for conserving these amazing reptiles for future generations, so please take photos of every snake you see – just don’t get too close to the ones with rattles. We are also interested in photos of Desert Box turtles and long-nosed leopard lizards, both of which are very rare in the park’s east district."),
+                h4("Saguaro National Park is a reptile and amphibian paradise! We have nearly 50 species, but many are quite rare. Knowing where they occur is of great value for conserving them for future generations. So please take photos of every snake you see – just don’t get too close to the ones with rattles! We are also interested in photos of Desert Box turtles and long-nosed leopard lizards, both very rare in the park’s east district."),
                 h4("Please help us by uploading any photos you take of reptiles and amphibians to iNaturalist. Download the free app by scanning the QR code to the left."),
                 )),
         div(class = "science-content-3",
             img(src = "img/saguarobloom.jpg", alt = "A photo take from above capturing the white blossums of a Saguaro Cactus", class = "science-img"),
             div(class = "science-text purp",
                 h3("Saguaro Blooms"),
-                h4("Saguaros always bloom in late spring, during May and June – except when they don’t. Late fall and winter flowers on saguaros are quite unusual, but sometimes – as in 2020 – the park sees large fall blooms, for reasons scientists don’t understand. These flowers are pollinated and turn into bright red fruits that ripen as late as January."),
-                h4("If you see a saguaro blooming during the months of September through March, please be a citizen scientist and take a photo of it! These records are valuable for long-term research on how saguaros are adapting to warming temperatures in the Sonoran Desert."),
+                h4("Saguaros always bloom in late spring, during May and June – except when they don’t. Late fall and winter flowers on saguaros are quite unusual, but sometimes – as in 2020 – the park sees large fall blooms, for reasons scientists don’t understand. If you see a saguaro blooming during the months of September through March, please be a citizen scientist and take a photo of it! These records are valuable for long-term research on how saguaros are adapting to warming temperatures in the Sonoran Desert."),
                 h4("You can upload any saguaro flower photos to iNaturalist:", img(src = "img/inat_QR.png", class = "qrimg"))))
     )),
     
@@ -277,9 +273,6 @@ ui <- fluidPage(
             icon("circle-info",  class = "body-box-icon"),
             h4("About This Page", class = "body-titles")),
         div(class = "about-info-box",
-            h4("Land Acknowledgement Statement"),
-            "The observations summarized here are from across the homeland of the BLANK.",
-            br(),
             h4("Background"),
             "There is a wealth of scientific data collected by citizen scientists that exists 
             in protected areas like national parks. These data have generally not been leveraged 

@@ -72,7 +72,7 @@ table.dataTable th:focus {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-image: url("../img/background_JB.jpg");
+  background-image: url("../img/saguaro_ridgeline.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -279,7 +279,7 @@ nav a:focus::before {
   position: relative;
   color: black;
   font-size: 3vw;
-  margin-left: 220px;
+  margin-left: 50px;
 }
 
 .photo-cred {
@@ -855,6 +855,7 @@ nav a:focus::before {
 .qrimg {
   width: 20%;
   margin-left: 3rem;
+  border-radius: 1rem;
 }
 
 .rep-imgs {
@@ -879,7 +880,8 @@ nav a:focus::before {
 .qrimg-rep {
   grid-area: qr;
   margin: auto;
-  width: 40%;
+  width: 32%;
+  border-radius: 1rem;
 }
 
 
