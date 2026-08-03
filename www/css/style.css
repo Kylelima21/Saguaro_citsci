@@ -295,9 +295,7 @@ nav a:focus::before {
   color: var(--clr-base-blue);
 }
 
-/*.shadow-dark {
-  text-shadow: 0px 4px 4px rgba(47, 47, 47, 1);
-}*/
+
 
 
 
@@ -313,6 +311,7 @@ nav a:focus::before {
   margin-top: 70vh;
 }
 
+/*
 .intro-box {
   position: relative;
   background-color: var(--clr-body-boxes);
@@ -452,7 +451,7 @@ nav a:focus::before {
 .species-btn:focus + .tres-text + .snap-text + .mon-text {
   transform: scale(1);
 }
-
+*/
 
 
 
@@ -862,16 +861,17 @@ nav a:focus::before {
   grid-area: imgs;
   margin: auto;
   display: grid;
-  grid-row-gap: 5%;
+  grid-template-rows: 55% 5% 40%;
   grid-template-areas: 
     "snake" 
+    "j"
     "qr"
 }
 
 .rep-snk {
   grid-area: snake;
   width: 100%;
-  max-height: 450px;
+  max-height: 100%;
   border-radius: 1rem;
   box-shadow: 3px 3px 1rem rgba(0, 0, 0, 0.4);
   object-fit: cover;

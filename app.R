@@ -282,7 +282,7 @@ ui <- fluidPage(
             workflow that is transferable across protected areas.",
             br(),
             h4("Partners"),
-            h3("Schoodic Institute"),
+            h3("Schoodic Institute at Acadia National Park"),
             "Established in 2004, Schoodic Institute at Acadia National Park is a 501(c)(3) nonprofit
             organization and a partner in science and education of the National Park Service. Based at the
             largest National Park Service Research Learning Center in Winter Harbor, Maine, in
