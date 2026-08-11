@@ -37,8 +37,6 @@ rsconnect::setAccountInfo(name = "schoodic-institute-data",
                secret = Sys.getenv("SHINYAPPS_SECRET"),
                server = "shinyapps.io")
 
-token = "0566B090A0AA9F40F119188EFD7C4080"
-secret = "LuJR8wHMFHfioTHdYjDJWW11hHxvm38U8hNScUjg"
 
 ## Deploy
 rsconnect::deployApp(launch.browser = F, forceUpdate = T)
